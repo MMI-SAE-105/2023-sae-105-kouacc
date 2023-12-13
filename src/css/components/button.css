@@ -11,14 +11,17 @@
 
     color: #000;
     text-align: center;
-    
+}
+
+.order__button > a {
     /* button */
     font-family: Lato;
     font-size: var(--button);
     font-style: normal;
     font-weight: 700;
     line-height: 110%;
-    /* 1.1rem */
+    text-decoration: none;
+    color: #000;
 }
 
 .carrousel__button-left, .carrousel__button-right {
@@ -43,4 +46,22 @@
     height: 24px;
     flex-shrink: 0;
     margin-left: -6px;
+}
+
+.contact__button-submit {
+    background: var(--main, #FF9533);
+    border-radius: 8px;
+    box-shadow: 6px 6px 0px 0px #B77539;
+    border: 0;
+    width: 117px;
+    height: 51px;
+    
+    text-align: center;
+    /* button */
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+
 }

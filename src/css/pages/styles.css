@@ -4,7 +4,11 @@
 
 @import url(/src/css/layout/hero.css);
 
+@import url(/src/css/layout/article.css);
+
 @import url(/src/css/base/main.css);
+
+@import url(/src/css/base/styles.css);
 
 @import url(/src/css/components/header.css);
 
@@ -12,5 +16,5 @@
 
 @import url(/src/css/components/carrousel.css);
 
-@import url(/src/css/components/button.css)
+@import url(/src/css/components/button.css);
 

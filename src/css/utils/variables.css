@@ -8,12 +8,11 @@
         --gradient-blue: rgba(205, 216, 255, 1);
     
         /* Text-size styles */
-        /* base size: button (16px) */
-        --heading-1: 3rem;
-        --heading-2: 2.12rem;
-        --heading-3: 1.5rem;
-        --caption: 1.12rem;
-        --paragraph: 0.88rem;
-        --button: 1rem;
+        --heading-1: 48px;
+        --heading-2: 34px;
+        --heading-3: 24px;
+        --caption: 18px;
+        --paragraph: 14px;
+        --button: 16px;
 }
 

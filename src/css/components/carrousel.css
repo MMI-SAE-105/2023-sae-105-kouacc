@@ -9,7 +9,6 @@
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     border-radius: 20px;
-    overflow: hidden;
 }
 
 .carrousel__ecran {

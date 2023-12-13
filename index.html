@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nouvel Rétrospective</title>
-    <link rel="stylesheet" href="src/css/pages/styles.css">
+    <link rel="stylesheet" href="/src/css/pages/styles.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="shortcut icon" href="/public/icons/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <a href="index.html"><img src="public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
+        <a href="index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
         <button><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
         <nav>
             <ul>
@@ -43,65 +43,65 @@
             travers une exposition spectaculaire.</p>
         </section>
         <section class="order">
-            <h3 class="order__text">Intéressé ?</h3>
-            <button class="order__button">Réserver des billets</button>
+            <h3 class="order__text">Intéressé ? Découvrez les horaires et les tarifs ici</h3>
+            <button class="order__button"><a href="pages/reservations.html">Réserver des billets</a></button>
         </section>
-        <section>
+        <section x-data="{hrefCourant: '#ecran-1',}">
             <h2>Réalisations</h2>
             <div class="carrousel">
-                <button class="carrousel__button-left"><img src="public/icons/angle-left 1.svg" alt="Flèche gauche"></button>
-                <button class="carrousel__button-right"><img src="public/icons/angle-right 1.svg" alt="Flèche droite"></button>
-                <div class="carrousel__parent">
-                    <div class="carrousel__ecran">
+                <button class="carrousel__button-left" @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth"><img src="public/icons/angle-left 1.svg" alt="Flèche gauche"></button>
+                <button class="carrousel__button-right" @click="$refs.parent.scrollLeft += $refs.parent.clientWidth"><img src="public/icons/angle-right 1.svg" alt="Flèche droite"></button>
+                <div class="carrousel__parent" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                    <div id='ecran-1' class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre1.html"><img src="public/img/oeuvre1_1.webp" alt="Centre international de congrès Vinci"></a>
                             <figcaption>Centre Internationanl de Congrès Vinci</figcaption>
                             <p>Tours, France</p>
                         </figure>
                     </div>
-                    <div class="carrousel__ecran">
+                    <div id='ecran-2' class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre2.html"><img src="public/img/oeuvre2_1.webp" alt="Fondation Cartier pour l'art contemporain"></a>
                             <figcaption>Fondation Cartier pour l'art contemporain</figcaption>
                             <p>Paris, France</p>
                         </figure>
                     </div>
-                    <div class="carrousel__ecran">
+                    <div id='ecran-3' class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre3.html"><img src="public/img/oeuvre3_1.webp" alt="Centre de Culture et des Congrès (KKL)"></a>
                             <figcaption>Centre de Culture et des Congrès (KKL)</figcaption>
                             <p>Lucerne, Suisse</p>
                         </figure>
                     </div>
-                    <div class="carrousel__ecran">
+                    <div id='ecran-4' class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre4.html"><img src="public/img/oeuvre4_1.webp" alt="Expo.02"></a>
                             <figcaption>Expo.02</figcaption>
                             <p>Morat, Suisse</p>
                         </figure>
                     </div>
-                    <div class="carrousel__ecran">
+                    <div id='ecran-5' class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre5.html"><img src="public/img/oeuvre5_1.webp" alt="Torre Agbar"></a>
                             <figcaption>Torre Agbar</figcaption>
                             <p>Barcelone, Espagne</p>
                         </figure>
                     </div>
-                    <div class="carrousel__ecran">
+                    <div id='ecran-6' class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre6.html"><img src="public/img/oeuvre6_1.webp" alt="Gare de Bruxelles-Midi"></a>
                             <figcaption>Gare de Bruxelles-Midi</figcaption>
                             <p>Saint-Gilles, Belgique</p>
                         </figure>
                     </div>
-                    <div class="carrousel__ecran">
+                    <div id='ecran-7' class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre7.html"><img src="public/img/oeuvre7_1.webp" alt="Tour 25 - White Walls"></a>
                             <figcaption>Tour 25 - White Walls</figcaption>
                             <p>Nicosie, Chypre</p>
                         </figure>
                     </div>
-                    <div class="carrousel__ecran">
+                    <div id='ecran-8' class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre8.html"><img src="public/img/oeuvre8_1.webp" alt="Boutique Cheongdam-Dong"></a>
                             <figcaption>Boutique Cheongdam-Dong</figcaption>
@@ -114,7 +114,7 @@
     </main>
     <footer class="container">
         <div class="footer__logo">
-            <img src="public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
+            <img src="/public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
             <p>© Ateliers Jean Nouvel</p>
         </div>
         <a href="#">Conditions d'utilisation</a>
