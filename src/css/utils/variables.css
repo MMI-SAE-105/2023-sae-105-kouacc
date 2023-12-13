@@ -1,0 +1,19 @@
+:root{
+    /* Color styles */
+        --main: rgba(255, 149, 51, 1);
+        --white: rgba(255, 255, 255, 1);
+        --black: rgba(46, 46, 46, 1);
+        --gray: rgba(246, 246, 246, 1);
+        --underline: rgba(90, 126, 255, 1);
+        --gradient-blue: rgba(205, 216, 255, 1);
+    
+        /* Text-size styles */
+        /* base size: button (16px) */
+        --heading-1: 3rem;
+        --heading-2: 2.12rem;
+        --heading-3: 1.5rem;
+        --caption: 1.12rem;
+        --paragraph: 0.88rem;
+        --button: 1rem;
+}
+
