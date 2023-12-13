@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nouvel Rétrospective</title>
     <link rel="stylesheet" href="/src/css/pages/styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="shortcut icon" href="/public/icons/favicon.ico" type="image/x-icon">
 </head>
@@ -38,25 +39,50 @@
         </nav>
     </header>
     <main class="container">
-        <h1>Réservations</h1>
-        <div class="tarifs">
+        <h1 id="reservs">Réservations</h1>
+        <div class="tarifs" x-data="{tarif1: false, tarif2: false, tarif3: false}">
             <h2>Dates</h2>
             <p>Du samedi 13 avril au dimanche 23 juin 2024</p>
             <h2>Horaires</h2>
-            <div>
-                <p>Lundi : fermé</p>
-                <p>Mardi : 11h à 22h</p>
-                <p>Mercredi : 11h à 20h</p>
-                <p>Jeudi : 11h à 20h</p>
-                <p>Vendredi : 11h à 20h</p>
-                <p>Samedi : 11h à 20h</p>
-                <p>Dimanche : 11h à 20h</p>
-            </div>
+            <ul>
+                <li>Lundi : fermé</li>
+                <li>Mardi : 11h à 22h</li>
+                <li>Mercredi : 11h à 20h</li>
+                <li>Jeudi : 11h à 20h</li>
+                <li>Vendredi : 11h à 20h</li>
+                <li>Samedi : 11h à 20h</li>
+                <li>Dimanche : 11h à 20h</li>
+            </ul>
             <h2>Tarifs</h2>
-            <section class="tarifs__1"></section>
-            <section class="tarifs__2"></section>
-            <section class="tarifs__3"></section>
-        </div> 
+            <div class="tarifs__dropdowns">
+                <section class="tarifs__data">
+                    <button class="tarifs__button" @click="tarif1 = ! tarif1">Tarif 1<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
+                    <ul x-show="tarif1" x-collapse>
+                        <li>Test 1</li>
+                        <li>Test 1</li>
+                    </ul>
+                </section>
+                <section class="tarifs__data">
+                    <button class="tarifs__button" @click="tarif2 = ! tarif2">Tarif 2<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
+                    <ul x-show="tarif2" x-collapse>
+                        <li>Test 1</li>
+                        <li>Test 1</li>
+                    </ul>
+                </section>
+                <section class="tarifs__data">
+                    <button class="tarifs__button" @click="tarif3 = ! tarif3">Tarif 3<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
+                    <ul x-show="tarif3" x-collapse>
+                        <li>Test 1</li>
+                        <li>Test 1</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <ul class="tarifs__warning">Notes :
+            <li>Les billets sont non-remboursables.</li>
+            <li>À l’entrée de l’exposition, un contrôle d’identité sera effectué en fonction de la densité de visiteurs. Pensez donc à prévoir une pièce d’identité lors de votre visite.</li>
+            <li>Les salles commencent à fermer à 19h45, ou à 21h45 le mardi.</li>
+        </ul>
     </main>
     <footer>
         <div class="footer">

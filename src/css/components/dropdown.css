@@ -1,0 +1,36 @@
+.tarifs__data {
+    background-color: var(--gray);
+    border-radius: 8px;
+}
+
+.tarifs__data > ul {
+    list-style: none;
+    margin: 0;
+}
+
+.tarifs__button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    justify-content: space-between;
+    padding: 10px 12px 10px 12px;
+    width: 343px;
+
+    
+    background-color: var(--gray);
+    border-radius: 8px;
+    margin: 0;
+    font-size: var(--button);
+    font-family: Lato;
+}
+
+.tarifs__button img {
+    width: 20px;
+}
+
+.tarifs__dropdowns {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}

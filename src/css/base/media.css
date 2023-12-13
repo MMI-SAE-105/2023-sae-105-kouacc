@@ -5,5 +5,7 @@ img {
 
 .carrousel__ecran > figure > a > img {
     max-width: 100%;
+    width: auto;
     height: auto;
+    object-fit: cover;
 }
