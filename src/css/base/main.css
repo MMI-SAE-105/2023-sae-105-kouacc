@@ -6,6 +6,10 @@ body {
     padding: 0px 25px;
 }
 
+.noscroll, .noscroll body {
+    overflow: hidden;
+}
+
 h1 {
     font-size: var(--heading-1);
     font-family: 'Space Grotesk', sans-serif;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" :class="noscroll:menuOuvert">
+<html lang="fr" :class="{noscroll:menuOuvert,}">
 
 <head>
     <meta charset="UTF-8">
@@ -13,11 +13,11 @@
 <body>
     <header x-data="{menuOuvert: false}">
         <div class="header__logo">
-            <a id="logo" href="/index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
+            <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
         </div>
         <div class="header__buttons">
-            <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/globe.svg" alt="Globe changement de langue"><a href="contact.html"></a></button>
-            <button><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
+            <button><img src="/public/icons/globe.svg" alt="Globe changement de langue"><a href="contact.html"></a></button>
+            <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
         </div>
         <nav class="menu" x-show="menuOuvert" x-transition.duration.500ms>
             <ul class="menu__nav">
