@@ -8,7 +8,7 @@
 
 @import url(/src/css/base/main.css);
 
-@import url(/src/css/base/styles.css);
+@import url(/src/css/base/media.css);
 
 @import url(/src/css/components/header.css);
 
@@ -21,4 +21,6 @@
 @import url(/src/css/components/contact.css);
 
 @import url(/src/css/layout/menu.css);
+
+@import url(/src/css/layout/price.css);
 
