@@ -1,11 +1,24 @@
 footer {
     background: var(--black, #2E2E2E);
     color: var(--white, #FFFFFF);
-    padding-top: 14px;
+    padding: 14px 20px 6px 20px;
     margin-top: 50px;
 }
 
-footer > a {
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+}
+
+.footer__legal {
+    display: flex;
+    gap: 10px;
+
+}
+
+.footer__legal > a {
     color: var(--white, #FFFFFF);
     text-decoration: none;
     font-family: 'Lato', sans-serif;
@@ -16,4 +29,5 @@ footer > a {
     width: 100%;
     display: flex;
     gap: 10px;
+    align-items: center;
 }

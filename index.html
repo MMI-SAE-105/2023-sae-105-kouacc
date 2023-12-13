@@ -12,8 +12,13 @@
 
 <body>
     <header>
-        <a href="index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
-        <button><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
+        <div class="header__logo">
+            <a id="logo" href="/index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
+        </div>
+        <div class="header__buttons">
+            <button><img src="/public/icons/globe.svg" alt="Globe changement de langue"><a href="contact.html"></a></button>
+            <button><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
+        </div>
         <nav>
             <ul>
                 <li><a href="/pages/architecte.html"></a>Jean Nouvel</li>
@@ -112,13 +117,17 @@
             </div>
         </section>
     </main>
-    <footer class="container">
-        <div class="footer__logo">
-            <img src="/public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
-            <p>© Ateliers Jean Nouvel</p>
+    <footer>
+        <div class="footer">
+            <div class="footer__logo">
+                <img src="/public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
+                <p>© Ateliers Jean Nouvel</p>
+            </div>
+            <div class="footer__legal">
+                <a href="#">Conditions d'utilisation</a>
+                <a href="#">Politique de confidentialité</a>
+            </div>
         </div>
-        <a href="#">Conditions d'utilisation</a>
-        <a href="#">Politique de confidentialité</a>
     </footer>
 </body>
 </html>
