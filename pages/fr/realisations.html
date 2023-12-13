@@ -13,24 +13,28 @@
 <body>
     <header x-data="{menuOuvert: false}">
         <div class="header__logo">
-            <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
+            <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg"
+                    alt="Logo Nouvel Rétrospective"></a>
         </div>
         <div class="header__buttons">
-            <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/globe.svg"
-                    alt="Globe changement de langue"><a href="contact.html"></a></button>
-            <button><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
+            <button><img src="/public/icons/globe.svg" alt="Globe changement de langue"><a href="contact.html"></a></button>
+            <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
         </div>
         <nav class="menu" x-show="menuOuvert" x-transition.duration.500ms>
+            <div class="menu__button">
+                <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/cross.svg" alt="Croix menu"></button>
+            </div>
             <ul class="menu__nav">
+                <div class="menu__line"></div>
                 <li><a href="/pages/fr/architecte.html">Jean Nouvel</a></li>
                 <li><a href="/pages/fr/realisations.html">Réalisations</a></li>
                 <li><a href="/pages/fr/reservations.html">Réservations</a></li>
                 <li><a href="/pages/fr/contact.html">Contact</a></li>
             </ul>
-            <div class="menu__legal">
+            <footer class="menu__legal">
                 <img src="/public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
                 <p>© Ateliers Jean Nouvel</p>
-            </div>
+            </footer>
         </nav>
     </header>
     <main>
