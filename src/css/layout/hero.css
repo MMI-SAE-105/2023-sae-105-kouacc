@@ -1,0 +1,10 @@
+.hero {
+    background: linear-gradient(132deg, #CDD8FF 1.01%, #FF9533 100%);
+}
+
+.hero__localisation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

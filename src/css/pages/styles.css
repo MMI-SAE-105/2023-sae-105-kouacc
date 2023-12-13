@@ -2,3 +2,15 @@
 
 @import url(/src/css/utils/variables.css);
 
+@import url(/src/css/layout/hero.css);
+
+@import url(/src/css/base/main.css);
+
+@import url(/src/css/components/header.css);
+
+@import url(/src/css/components/footer.css);
+
+@import url(/src/css/components/carrousel.css);
+
+@import url(/src/css/components/button.css)
+

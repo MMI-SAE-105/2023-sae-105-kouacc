@@ -24,95 +24,99 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="container hero">
             <h1>Redéfinissez le <span>nouveau</span></h1>
             <h3>Nouvel Rétrospective, plus de 50 ans de travail</h3>
-            <caption>du 13 avril au 23 juin 2024</caption>
+            <h4>du 13 avril au 23 juin 2024</h4>
             <svg xmlns="http://www.w3.org/2000/svg" width="343" height="2" viewBox="0 0 343 2" fill="none">
                 <rect y="0.799988" width="343" height="2" fill="black" />
             </svg>
-            <img src="public/icons/marker 1.svg" alt="Pin emplacement">
-            <caption>Fondation Cartier, 261 Bd Raspail, 75014 Paris</caption>
+            <div class="hero__localisation">
+                <img src="public/icons/marker 1.svg" alt="Pin emplacement">
+                <h4>Fondation Cartier, 261 Bd Raspail, 75014 Paris</h4>
+            </div>
         </section>
         <section>
-            <img src="#" alt="Portrait Jean Nouvel">
+            <img src="public/img/portrait1.webp" alt="Portrait Jean Nouvel">
             <h2>Jean Nouvel</h2>
             <p>Distingué de nombreux prix internationaux, découvrez cet architecte d’exception sur sa vision de l’espace urbain à
             travers une exposition spectaculaire.</p>
         </section>
-        <section>
-            <h3>Intéressé ?</h3>
-            <button>Réserver des billets</button>
+        <section class="order">
+            <h3 class="order__text">Intéressé ?</h3>
+            <button class="order__button">Réserver des billets</button>
         </section>
         <section>
             <h2>Réalisations</h2>
             <div class="carrousel">
-                <button><img src="public/icons/angle-left 1.svg" alt="Flèche gauche"></button>
-                <button><img src="public/icons/angle-right 1.svg" alt="Flèche droite"></button>
+                <button class="carrousel__button-left"><img src="public/icons/angle-left 1.svg" alt="Flèche gauche"></button>
+                <button class="carrousel__button-right"><img src="public/icons/angle-right 1.svg" alt="Flèche droite"></button>
                 <div class="carrousel__parent">
-                    <div class="carrousel__ecran_1">
+                    <div class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre1.html"><img src="public/img/oeuvre1_1.webp" alt="Centre international de congrès Vinci"></a>
                             <figcaption>Centre Internationanl de Congrès Vinci</figcaption>
-                            <figcaption>Tours, France</figcaption>
+                            <p>Tours, France</p>
                         </figure>
                     </div>
-                    <div class="carrousel__ecran_2">
+                    <div class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre2.html"><img src="public/img/oeuvre2_1.webp" alt="Fondation Cartier pour l'art contemporain"></a>
                             <figcaption>Fondation Cartier pour l'art contemporain</figcaption>
-                            <figcaption>Paris, France</figcaption>
+                            <p>Paris, France</p>
                         </figure>
                     </div>
-                    <div class="carrousel__ecran_3">
+                    <div class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre3.html"><img src="public/img/oeuvre3_1.webp" alt="Centre de Culture et des Congrès (KKL)"></a>
                             <figcaption>Centre de Culture et des Congrès (KKL)</figcaption>
-                            <figcaption>Lucerne, Suisse</figcaption>
+                            <p>Lucerne, Suisse</p>
                         </figure>
                     </div>
-                    <div class="carrousel__ecran_4">
+                    <div class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre4.html"><img src="public/img/oeuvre4_1.webp" alt="Expo.02"></a>
                             <figcaption>Expo.02</figcaption>
-                            <figcaption>Morat, Suisse</figcaption>
+                            <p>Morat, Suisse</p>
                         </figure>
                     </div>
-                    <div class="carrousel__ecran_5">
+                    <div class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre5.html"><img src="public/img/oeuvre5_1.webp" alt="Torre Agbar"></a>
                             <figcaption>Torre Agbar</figcaption>
-                            <figcaption>Barcelone, Espagne</figcaption>
+                            <p>Barcelone, Espagne</p>
                         </figure>
                     </div>
-                    <div class="carrousel__ecran_6">
+                    <div class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre6.html"><img src="public/img/oeuvre6_1.webp" alt="Gare de Bruxelles-Midi"></a>
                             <figcaption>Gare de Bruxelles-Midi</figcaption>
-                            <figcaption>Saint-Gilles, Belgique</figcaption>
+                            <p>Saint-Gilles, Belgique</p>
                         </figure>
                     </div>
-                    <div class="carrousel__ecran_7">
+                    <div class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre7.html"><img src="public/img/oeuvre7_1.webp" alt="Tour 25 - White Walls"></a>
                             <figcaption>Tour 25 - White Walls</figcaption>
-                            <figcaption>Nicosie, Chypre</figcaption>
+                            <p>Nicosie, Chypre</p>
                         </figure>
                     </div>
-                    <div class="carrousel__ecran_8">
+                    <div class="carrousel__ecran">
                         <figure>
                             <a href="pages/real/oeuvre8.html"><img src="public/img/oeuvre8_1.webp" alt="Boutique Cheongdam-Dong"></a>
                             <figcaption>Boutique Cheongdam-Dong</figcaption>
-                            <figcaption>Séoul, Corée du Sud</figcaption>
+                            <p>Séoul, Corée du Sud</p>
                         </figure>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        <img src="public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
-        <p>© Ateliers Jean Nouvel</p>
+    <footer class="container">
+        <div class="footer__logo">
+            <img src="public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
+            <p>© Ateliers Jean Nouvel</p>
+        </div>
         <a href="#">Conditions d'utilisation</a>
         <a href="#">Politique de confidentialité</a>
     </footer>

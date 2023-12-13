@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+}
+
+.container {
+    padding: 0px 25px;
+}
+
+h1 {
+    font-size: var(--heading-1);
+    font-family: 'Space Grotesk', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    margin: 0;
+}
+
+h2 {
+    font-size: var(--heading-2);
+    font-family: 'Space Grotesk', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    margin: 0;
+}
+
+h3 {
+    font-size: var(--heading-2);
+    font-family: 'Space Grotesk', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    margin: 0;
+}
+
+h4 {
+    font-family: Lato;
+    font-size: var(--caption);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    margin: 0;
+}
+
+p {
+    font-size: var(--paragraph);
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    margin: 0;
+}
+
+figcaption {
+    font-family: Lato;
+    font-size: var(--caption);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+}
