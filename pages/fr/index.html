@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/src/css/pages/styles.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="shortcut icon" href="/public/icons/favicon.ico" type="image/x-icon">
-    <a href="../fr/index.html" onclick="document.cookie = `nf_lang=fr; path=/ ; SameSite=Strict`">
+    
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
         </div>
         <div class="header__buttons">
-            <button><img src="/public/icons/globe.svg" alt="Globe changement de langue"><a href="contact.html"></a></button>
+            <button onclick="document.cookie = `nf_lang=fr; path=/ ; SameSite=Strict`"><img src="/public/icons/globe.svg" alt="Globe changement de langue"><a href="contact.html"></a></button>
             <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
         </div>
         <nav class="menu" x-show="menuOuvert" x-transition.duration.500ms>

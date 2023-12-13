@@ -5,6 +5,7 @@
     background-color: var(--black);
     width: 100vw;
     height: 100vh;
+    z-index: 1;
 }
 
 .menu__button {
