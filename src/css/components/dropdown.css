@@ -4,8 +4,13 @@
 }
 
 .tarifs__data > ul {
-    list-style: none;
     margin: 0;
+}
+
+.tarifs__data > ul > li {
+    font-size: var(--paragraph);
+    font-family: Lato;
+    padding-bottom: 10px;
 }
 
 .tarifs__button {

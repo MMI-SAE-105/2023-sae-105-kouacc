@@ -46,7 +46,7 @@
                 <rect y="0.799988" width="343" height="2" fill="black" />
             </svg>
             <div class="hero__localisation">
-                <img src="/public/icons/marker 1.svg" alt="Pin emplacement">
+                <img src="/public/icons/marker.svg" alt="Pin emplacement">
                 <h4>Fondation Cartier, 261 Bd Raspail, 75014 Paris</h4>
             </div>
         </section>
@@ -63,8 +63,8 @@
         <section x-data="{hrefCourant: '#ecran-1',}">
             <h2>Réalisations</h2>
             <div class="carrousel">
-                <button class="carrousel__button-left" @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth"><img src="/public/icons/angle-left 1.svg" alt="Flèche gauche"></button>
-                <button class="carrousel__button-right" @click="$refs.parent.scrollLeft += $refs.parent.clientWidth"><img src="/public/icons/angle-right 1.svg" alt="Flèche droite"></button>
+                <button class="carrousel__button-left" @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth"><img src="/public/icons/angle-left.svg" alt="Flèche gauche"></button>
+                <button class="carrousel__button-right" @click="$refs.parent.scrollLeft += $refs.parent.clientWidth"><img src="/public/icons/angle-right.svg" alt="Flèche droite"></button>
                 <div class="carrousel__parent" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
                     <div id='ecran-1' class="carrousel__ecran">
                         <figure>

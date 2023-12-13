@@ -56,24 +56,24 @@
             <h2>Tarifs</h2>
             <div class="tarifs__dropdowns">
                 <section class="tarifs__data">
-                    <button class="tarifs__button" @click="tarif1 = ! tarif1">Tarif 1<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
+                    <button class="tarifs__button" @click="tarif1 = ! tarif1">Tarifs standards<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
                     <ul x-show="tarif1" x-collapse>
-                        <li>Test 1</li>
-                        <li>Test 1</li>
+                        <li>Plein tarif : 11€</li>
+                        <li>Fondation Cartier Pass : 18€ - 50€</li>
                     </ul>
                 </section>
                 <section class="tarifs__data">
-                    <button class="tarifs__button" @click="tarif2 = ! tarif2">Tarif 2<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
+                    <button class="tarifs__button" @click="tarif2 = ! tarif2">Tarifs réduits<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
                     <ul x-show="tarif2" x-collapse>
-                        <li>Test 1</li>
-                        <li>Test 1</li>
+                        <li>Tarif réduit : 7,50€</li>
+                        <li>Réduction 13 - 25 ans : 5€</li>
                     </ul>
                 </section>
                 <section class="tarifs__data">
-                    <button class="tarifs__button" @click="tarif3 = ! tarif3">Tarif 3<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
+                    <button class="tarifs__button" @click="tarif3 = ! tarif3">Status spéciaux<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
                     <ul x-show="tarif3" x-collapse>
-                        <li>Test 1</li>
-                        <li>Test 1</li>
+                        <li>Carte Icom, carte de presse, laissez-passer annuel&nbsp;: gratuit</li>
+                        <li>Moins de 13 ans, étudiants, carte d'invalidité : gratuit</li>
                     </ul>
                 </section>
             </div>
