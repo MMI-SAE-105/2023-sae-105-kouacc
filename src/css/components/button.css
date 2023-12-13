@@ -48,7 +48,12 @@
     margin-left: -6px;
 }
 
-.contact__button-submit {
+.contact__button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact__button > button {
     background: var(--main, #FF9533);
     border-radius: 8px;
     box-shadow: 6px 6px 0px 0px #B77539;
@@ -63,5 +68,4 @@
     font-style: normal;
     font-weight: 700;
     line-height: 110%;
-
 }

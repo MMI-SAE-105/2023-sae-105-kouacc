@@ -1,9 +1,24 @@
 .menu {
     position: fixed;
     top: 0;
+    left: 0;
     background-color: var(--black);
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu__button {
+    display: flex;
+    justify-content: flex-end;
+    margin: 13px 20px 0px 0px
+}
+
+.menu__button > button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: 0;
 }
 
 .menu li {
@@ -20,17 +35,31 @@
     align-items: center;
     gap: 10px;
     color: var(--white);
+    padding-left: 22px;
+    margin-top: 100px;
 }
 
 .menu__nav {
+    height: auto;
     margin: 0;
+    left: 30px;
     padding: 0;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    position: relative;
 }
 
 .menu a {
     text-decoration: none;
     color: var(--white);
+}
+
+.menu__line {
+    left: -15px;
+    width: 5px;
+    height: 100%;
+    background-color: white;
+    z-index: 10;
+    position: absolute;
 }

@@ -6,6 +6,12 @@ body {
     padding: 0px 25px;
 }
 
+.title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .noscroll, .noscroll body {
     overflow: hidden;
 }

@@ -1,4 +1,8 @@
 .contact {
+    margin-top: 30px;
+}
+
+.contact__form {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -16,7 +20,11 @@
     /* 19.8px */
 }
 
-input[placeholder] {
+input {
+    padding: 15px 10px 15px 10px;
+}
+
+input[placeholder], textarea {
     color: #B5B5B5;
     /* caption */
     font-family: Lato;
@@ -33,3 +41,4 @@ input[placeholder] {
     padding: 10px;
     background-color: var(--gray);
 }
+
