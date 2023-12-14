@@ -8,6 +8,11 @@
     z-index: 1;
 }
 
+.menu ul {
+    border-left: 5px white solid;
+
+}
+
 .menu__button {
     display: flex;
     justify-content: flex-end;
@@ -27,7 +32,7 @@
     color: var(--white);
     font-family: "Space Grotesk", sans-serif;
     font-size: var(--heading-2);
-    padding: 34px 0 34px 0;
+    padding: 34px 0 34px 27px;
 }
 
 .menu__legal {
@@ -54,13 +59,4 @@
 .menu a {
     text-decoration: none;
     color: var(--white);
-}
-
-.menu__line {
-    left: -15px;
-    width: 5px;
-    height: 100%;
-    background-color: white;
-    z-index: 10;
-    position: absolute;
 }
