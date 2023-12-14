@@ -23,7 +23,6 @@
 
 .hero-2 {
     color: var(--white);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(/public/img/oeuvre1_1.webp);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -36,6 +35,38 @@
     position: relative;
     margin-top: 20px;
     width: 10%;
+}
+
+#oeuvre1 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(/public/img/oeuvre1_1.webp);
+}
+
+#oeuvre2 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(/public/img/oeuvre2_1.webp);
+}
+
+#oeuvre3 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(/public/img/oeuvre3_1.webp);
+}
+
+#oeuvre4 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(/public/img/oeuvre4_1.webp);
+}
+
+#oeuvre5 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(/public/img/oeuvre5_1.webp);
+}
+
+#oeuvre6 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(/public/img/oeuvre6_1.webp);
+}
+
+#oeuvre7 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(/public/img/oeuvre7_1.webp);
+}
+
+#oeuvre8 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(/public/img/oeuvre8_1.webp);
 }
 
 .hero-2 > h1 {
