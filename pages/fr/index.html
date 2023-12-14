@@ -37,32 +37,38 @@
     </header>
     <main>
         <section class="container hero-1">
-            <h1>Redéfinissez le <span>nouveau</span></h1>
-            <h3>Nouvel Rétrospective, plus de 50 ans de travail</h3>
-            <h4>du 13 avril au 23 juin 2024</h4>
+            <section class="hero-1__title">
+                <h1>Redéfinissez le <span>nouveau</span></h1>
+                <div class="hero-1__description">
+                    <h3>Nouvel Rétrospective, plus de 50 ans de travail</h3>
+                    <h4>du 13 avril au 23 juin 2024</h4>
+                </div>
+            </section>
             <svg xmlns="http://www.w3.org/2000/svg" width="343" height="2" viewBox="0 0 343 2" fill="none">
                 <rect y="0.799988" width="343" height="2" fill="black" />
             </svg>
-            <div class="hero__localisation">
+            <div class="hero-1__localisation">
                 <img src="/public/icons/marker.svg" alt="Pin emplacement">
                 <h4>Fondation Cartier, 261 Bd Raspail, 75014 Paris</h4>
             </div>
         </section>
-        <div class="container">
-            <section>
-                <img src="/public/img/portrait1.webp" alt="Portrait Jean Nouvel">
-                <h2>Jean Nouvel</h2>
-                <p>Distingué de nombreux prix internationaux, découvrez cet architecte d’exception sur sa vision de l’espace urbain
-                    à
-                    travers une exposition spectaculaire.</p>
-            </section>
-            <section class="order">
-                <h3 class="order__text">Intéressé ? Découvrez les horaires et les tarifs ici</h3>
-                <a class="order__button" href="/pages/fr/reservations.html">Réserver des billets</a>
-            </section>
-            <section x-data="{hrefCourant: '#ecran-1',}">
+        <div class="container home">
+            <div class="home__info">
+                <section class="home__architect">
+                    <img src="/public/img/portrait1.webp" alt="Portrait Jean Nouvel">
+                    <h2>Jean Nouvel</h2>
+                    <p>Distingué de nombreux prix internationaux, découvrez cet architecte d’exception sur sa vision de l’espace urbain
+                        à
+                        travers une exposition spectaculaire.</p>
+                </section>
+                <section class="home__order">
+                    <h3 class="home__order__text">Intéressé ? Découvrez les horaires et les tarifs ici</h3>
+                    <a class="home__order__button" href="/pages/fr/reservations.html">Réserver des billets</a>
+                </section>
+            </div>
+            <section class="carrousel" x-data="{hrefCourant: '#ecran-1',}">
                 <h2>Réalisations</h2>
-                <div class="carrousel">
+                <div class="carrousel__slide">
                     <button class="carrousel__button-left" @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth"><img
                             src="/public/icons/angle-left.svg" alt="Flèche gauche"></button>
                     <button class="carrousel__button-right" @click="$refs.parent.scrollLeft += $refs.parent.clientWidth"><img

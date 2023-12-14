@@ -2,7 +2,13 @@
     background: linear-gradient(132deg, #CDD8FF 1.01%, #FF9533 100%);
 }
 
-.hero__localisation {
+.hero-1__title {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.hero-1__localisation {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -10,11 +16,11 @@
     padding-bottom: 43px;
 }
 
-.hero > svg {
+.hero-1 > svg {
     margin: 25px 0px
 }
 
-.hero > h1 > span {
+.hero-1__title > h1 > span {
     text-decoration-line: underline;
     text-decoration-style: "solid";
     text-decoration-color: rgba(90, 126, 255, 1);

@@ -9,3 +9,10 @@ img {
     height: auto;
     object-fit: cover;
 }
+
+.home__architect > img {
+    float: left;
+    width: 131px;
+    height: 131px;
+    margin-right: 12px;
+}

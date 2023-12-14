@@ -1,0 +1,26 @@
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.home__info {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.home__architect {
+    margin-top: 45px;
+}
+
+.home__order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.carrousel {
+    margin-top: 28px;
+}
