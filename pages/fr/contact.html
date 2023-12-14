@@ -13,11 +13,10 @@
 <body>
     <header x-data="{menuOuvert: false}">
         <div class="header__logo">
-            <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg"
-                    alt="Logo Nouvel Rétrospective"></a>
+            <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
         </div>
         <div class="header__buttons">
-            <button><img src="/public/icons/globe.svg" alt="Globe changement de langue"><a href="contact.html"></a></button>
+            <a href="/pages/en/index.html" onclick="document.cookie = `nf_lang=fr; path=/ ; SameSite=Strict`"><img src="/public/icons/globe.svg" alt="Globe changement de langue"></a>
             <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
         </div>
         <nav class="menu" x-show="menuOuvert" x-transition.duration.500ms>
@@ -25,16 +24,15 @@
                 <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/cross.svg" alt="Croix menu"></button>
             </div>
             <ul class="menu__nav">
-                <div class="menu__line"></div>
                 <li><a href="/pages/fr/architecte.html">Jean Nouvel</a></li>
                 <li><a href="/pages/fr/realisations.html">Réalisations</a></li>
                 <li><a href="/pages/fr/reservations.html">Réservations</a></li>
                 <li><a href="/pages/fr/contact.html">Contact</a></li>
             </ul>
-            <footer class="menu__legal">
+            <div class="menu__legal">
                 <img src="/public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
                 <p>© Ateliers Jean Nouvel</p>
-            </footer>
+            </div>
         </nav>
     </header>
     <main class="container">
@@ -42,12 +40,12 @@
             <h1>Contact</h1>
             <p>Une question ? Une demande ? Une réclamation ? Vous pouvez nous contactez à travers le formulaire ci-dessous.</p>
         </div>
-        <section class="contact">
+        <div class="contact">
             <form class="contact__form">
-                <label for="name">Nom</label>
+                <label for="firstname">Nom</label>
                 <input type="text" name="name" id="firstname" placeholder="LAMBERT" required>
-                <label for="name">Prénom</label>
-                <input type="type" name="name" id="lastname" placeholder="Alain" required>
+                <label for="lastname">Prénom</label>
+                <input type="text" name="name" id="lastname" placeholder="Alain" required>
                 <label for="email">Adresse e-mail</label>
                 <input type="email" name="email" id="email" placeholder="exemple@mail.com" required>
                 <label for="message">Message</label>
@@ -57,7 +55,7 @@
                 </div>
                 
             </form>
-        </section>
+        </div>
     </main>
     <footer>
         <div class="footer">

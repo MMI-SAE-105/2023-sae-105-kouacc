@@ -41,3 +41,15 @@
 #reservs {
     margin-bottom: 50px;
 }
+
+#tarifs__caption {
+    color: #000;
+    
+        /* caption */
+        font-family: Lato;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%;
+        /* 19.8px */
+}

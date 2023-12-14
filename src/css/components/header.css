@@ -11,12 +11,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    gap: 10px;
 }
 
 .header__buttons > button {
     background: transparent;
-        border: none;
-        cursor: pointer;
-        outline: none;
-        margin: 0;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: 0;
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr" :class="{noscroll:menuOuvert,}">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +16,7 @@
             <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
         </div>
         <div class="header__buttons">
-            <button onclick="document.cookie = `nf_lang=fr; path=/ ; SameSite=Strict`"><img src="/public/icons/globe.svg" alt="Globe changement de langue"><a href="contact.html"></a></button>
+            <a href="/pages/en/index.html" onclick="document.cookie = `nf_lang=fr; path=/ ; SameSite=Strict`"><img src="/public/icons/globe.svg" alt="Globe changement de langue"></a>
             <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
         </div>
         <nav class="menu" x-show="menuOuvert" x-transition.duration.500ms>
@@ -25,16 +24,15 @@
                 <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/cross.svg" alt="Croix menu"></button>
             </div>
             <ul class="menu__nav">
-                <div class="menu__line"></div>
                 <li><a href="/pages/fr/architecte.html">Jean Nouvel</a></li>
                 <li><a href="/pages/fr/realisations.html">Réalisations</a></li>
                 <li><a href="/pages/fr/reservations.html">Réservations</a></li>
                 <li><a href="/pages/fr/contact.html">Contact</a></li>
             </ul>
-            <footer class="menu__legal">
+            <div class="menu__legal">
                 <img src="/public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
                 <p>© Ateliers Jean Nouvel</p>
-            </footer>
+            </div>
         </nav>
     </header>
     <main>
@@ -50,7 +48,7 @@
                 <h4>Fondation Cartier, 261 Bd Raspail, 75014 Paris</h4>
             </div>
         </section>
-        <section class="container">
+        <div class="container">
             <section>
                 <img src="/public/img/portrait1.webp" alt="Portrait Jean Nouvel">
                 <h2>Jean Nouvel</h2>
@@ -60,7 +58,7 @@
             </section>
             <section class="order">
                 <h3 class="order__text">Intéressé ? Découvrez les horaires et les tarifs ici</h3>
-                <button class="order__button"><a href="pages/reservations.html">Réserver des billets</a></button>
+                <a class="order__button" href="/pages/fr/reservations.html">Réserver des billets</a>
             </section>
             <section x-data="{hrefCourant: '#ecran-1',}">
                 <h2>Réalisations</h2>
@@ -76,7 +74,6 @@
                                 <a href="/pages/fr/real/oeuvre1.html"><img src="/public/img/oeuvre1_1.webp"
                                         alt="Centre international de congrès Vinci"></a>
                                 <figcaption>Centre Internationanl de Congrès Vinci</figcaption>
-                                <p>Tours, France</p>
                             </figure>
                         </div>
                         <div id='ecran-2' class="carrousel__ecran">
@@ -84,7 +81,6 @@
                                 <a href="/pages/fr/real/oeuvre2.html"><img src="/public/img/oeuvre2_1.webp"
                                         alt="Fondation Cartier pour l'art contemporain"></a>
                                 <figcaption>Fondation Cartier pour l'art contemporain</figcaption>
-                                <p>Paris, France</p>
                             </figure>
                         </div>
                         <div id='ecran-3' class="carrousel__ecran">
@@ -92,21 +88,18 @@
                                 <a href="/pages/fr/real/oeuvre3.html"><img src="/public/img/oeuvre3_1.webp"
                                         alt="Centre de Culture et des Congrès (KKL)"></a>
                                 <figcaption>Centre de Culture et des Congrès (KKL)</figcaption>
-                                <p>Lucerne, Suisse</p>
                             </figure>
                         </div>
                         <div id='ecran-4' class="carrousel__ecran">
                             <figure>
                                 <a href="/pages/fr/real/oeuvre4.html"><img src="/public/img/oeuvre4_1.webp" alt="Expo.02"></a>
                                 <figcaption>Expo.02</figcaption>
-                                <p>Morat, Suisse</p>
                             </figure>
                         </div>
                         <div id='ecran-5' class="carrousel__ecran">
                             <figure>
                                 <a href="/pages/fr/real/oeuvre5.html"><img src="/public/img/oeuvre5_1.webp" alt="Torre Agbar"></a>
                                 <figcaption>Torre Agbar</figcaption>
-                                <p>Barcelone, Espagne</p>
                             </figure>
                         </div>
                         <div id='ecran-6' class="carrousel__ecran">
@@ -114,7 +107,6 @@
                                 <a href="/pages/fr/real/oeuvre6.html"><img src="/public/img/oeuvre6_1.webp"
                                         alt="Gare de Bruxelles-Midi"></a>
                                 <figcaption>Gare de Bruxelles-Midi</figcaption>
-                                <p>Saint-Gilles, Belgique</p>
                             </figure>
                         </div>
                         <div id='ecran-7' class="carrousel__ecran">
@@ -122,7 +114,6 @@
                                 <a href="/pages/fr/real/oeuvre7.html"><img src="/public/img/oeuvre7_1.webp"
                                         alt="Tour 25 - White Walls"></a>
                                 <figcaption>Tour 25 - White Walls</figcaption>
-                                <p>Nicosie, Chypre</p>
                             </figure>
                         </div>
                         <div id='ecran-8' class="carrousel__ecran">
@@ -130,13 +121,12 @@
                                 <a href="/pages/fr/real/oeuvre8.html"><img src="/public/img/oeuvre8_1.webp"
                                         alt="Boutique Cheongdam-Dong"></a>
                                 <figcaption>Boutique Cheongdam-Dong</figcaption>
-                                <p>Séoul, Corée du Sud</p>
                             </figure>
                         </div>
                     </div>
                 </div>
             </section>
-        </section>
+        </div>
     </main>
     <footer>
         <div class="footer">

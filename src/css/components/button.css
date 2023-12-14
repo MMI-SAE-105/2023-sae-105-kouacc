@@ -11,9 +11,6 @@
 
     color: #000;
     text-align: center;
-}
-
-.order__button > a {
     /* button */
     font-family: Lato;
     font-size: var(--button);
@@ -23,6 +20,7 @@
     text-decoration: none;
     color: #000;
 }
+
 
 .carrousel__button-left, .carrousel__button-right {
     border-radius: 12px;

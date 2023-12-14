@@ -14,11 +14,10 @@
 <body>
     <header x-data="{menuOuvert: false}">
         <div class="header__logo">
-            <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg"
-                    alt="Logo Nouvel Rétrospective"></a>
+            <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
         </div>
         <div class="header__buttons">
-            <button><img src="/public/icons/globe.svg" alt="Globe changement de langue"><a href="contact.html"></a></button>
+            <a href="/pages/en/index.html" onclick="document.cookie = `nf_lang=fr; path=/ ; SameSite=Strict`"><img src="/public/icons/globe.svg" alt="Globe changement de langue"></a>
             <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
         </div>
         <nav class="menu" x-show="menuOuvert" x-transition.duration.500ms>
@@ -26,16 +25,15 @@
                 <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/cross.svg" alt="Croix menu"></button>
             </div>
             <ul class="menu__nav">
-                <div class="menu__line"></div>
                 <li><a href="/pages/fr/architecte.html">Jean Nouvel</a></li>
                 <li><a href="/pages/fr/realisations.html">Réalisations</a></li>
                 <li><a href="/pages/fr/reservations.html">Réservations</a></li>
                 <li><a href="/pages/fr/contact.html">Contact</a></li>
             </ul>
-            <footer class="menu__legal">
+            <div class="menu__legal">
                 <img src="/public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
                 <p>© Ateliers Jean Nouvel</p>
-            </footer>
+            </div>
         </nav>
     </header>
     <main class="container">
@@ -55,30 +53,31 @@
             </ul>
             <h2>Tarifs</h2>
             <div class="tarifs__dropdowns">
-                <section class="tarifs__data">
+                <div class="tarifs__data">
                     <button class="tarifs__button" @click="tarif1 = ! tarif1">Tarifs standards<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
                     <ul x-show="tarif1" x-collapse>
                         <li>Plein tarif : 11€</li>
                         <li>Fondation Cartier Pass : 18€ - 50€</li>
                     </ul>
-                </section>
-                <section class="tarifs__data">
+                </div>
+                <div class="tarifs__data">
                     <button class="tarifs__button" @click="tarif2 = ! tarif2">Tarifs réduits<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
                     <ul x-show="tarif2" x-collapse>
                         <li>Tarif réduit : 7,50€</li>
                         <li>Réduction 13 - 25 ans : 5€</li>
                     </ul>
-                </section>
-                <section class="tarifs__data">
+                </div>
+                <div class="tarifs__data">
                     <button class="tarifs__button" @click="tarif3 = ! tarif3">Status spéciaux<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
                     <ul x-show="tarif3" x-collapse>
                         <li>Carte Icom, carte de presse, laissez-passer annuel&nbsp;: gratuit</li>
                         <li>Moins de 13 ans, étudiants, carte d'invalidité : gratuit</li>
                     </ul>
-                </section>
+                </div>
             </div>
         </div>
-        <ul class="tarifs__warning">Notes :
+        <ul class="tarifs__warning">
+            <li id="tarifs__caption">Notes :</li>
             <li>Les billets sont non-remboursables.</li>
             <li>À l’entrée de l’exposition, un contrôle d’identité sera effectué en fonction de la densité de visiteurs. Pensez donc à prévoir une pièce d’identité lors de votre visite.</li>
             <li>Les salles commencent à fermer à 19h45, ou à 21h45 le mardi.</li>
