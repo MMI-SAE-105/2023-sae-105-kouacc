@@ -16,3 +16,41 @@
     width: 100%;
     scroll-snap-align: start;
 }
+
+.caroussel__buttons_ecran {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.caroussel__buttons_ecran > li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.caroussel__buttons_ecran > li > a {
+    background-color: var(--gray);
+    font-size: 60px;
+    padding: 5px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.caroussel__buttons_link {
+    text-decoration: none;
+    color: black;
+    height: 10px;
+    width: 10px;
+}
+
+.caroussel__buttons_link.actif {
+    background-color: var(--main);
+}

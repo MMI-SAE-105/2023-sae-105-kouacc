@@ -29,7 +29,18 @@
     height: 38px;
     flex-shrink: 0;
     border: 0;
-    
+    position: absolute;
+    font-size: 24px;
+}
+
+.carrousel__button-left {
+    left: 0;
+    top: 35%;
+}
+
+.carrousel__button-right {
+    right: 0;
+    top: 35%;
 }
 
 .carrousel__button-right > img {
