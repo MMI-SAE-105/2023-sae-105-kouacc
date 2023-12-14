@@ -3,7 +3,8 @@ body {
 }
 
 .container {
-    padding: 0px 25px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .title-container {

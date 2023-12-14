@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouvel Rétrospective</title>
+    <link rel="stylesheet" href="/src/css/pages/styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="shortcut icon" href="/public/icons/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header x-data="{menuOuvert: false}">
+        <div class="header__logo">
+            <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg"
+                    alt="Logo Nouvel Rétrospective"></a>
+        </div>
+        <div class="header__buttons">
+            <button><img src="/public/icons/globe.svg" alt="Globe changement de langue"><a
+                    href="contact.html"></a></button>
+            <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg"
+                    alt="Menu header"></button>
+        </div>
+        <nav class="menu" x-show="menuOuvert" x-transition.duration.500ms>
+            <div class="menu__button">
+                <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/cross.svg" alt="Croix menu"></button>
+            </div>
+            <ul class="menu__nav">
+                <div class="menu__line"></div>
+                <li><a href="/pages/fr/architecte.html">Jean Nouvel</a></li>
+                <li><a href="/pages/fr/realisations.html">Réalisations</a></li>
+                <li><a href="/pages/fr/reservations.html">Réservations</a></li>
+                <li><a href="/pages/fr/contact.html">Contact</a></li>
+            </ul>
+            <footer class="menu__legal">
+                <img src="/public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
+                <p>© Ateliers Jean Nouvel</p>
+            </footer>
+        </nav>
+    </header>
+    <main>
+        <section class=" container hero-2">
+            <a id="hero-2__return" href="/pages/fr/realisations.html"><img src="/public/icons/angle-left_return.svg" alt="Flèche retour" fill="white"></img></a>
+            <h1>Centre International de Congrès Vinci</h1>
+            <h3>Tours, France</h3>
+        </section>
+        <article class="content container">
+            <h2>Détails</h2>
+            <ul class="content__status">
+                <li>Statut : <b>réalisé</b></li>
+                <li>Date de réalisation : <b>1989 - 1993</b></li>
+                <li>Surface utile : <b>22 000m² / 35 000m²</b></li>
+                <li>Maîtrise d'ouvrage : <b>Société d'Equipement de la Touraine (SET)</b></li>
+            </ul>
+            <p>« Une tour comme un arbre doit avoir des racines. Elle appartient à une géographie, à un territoire, à une topographie,
+            à un sol, à une géologie. Elle est l’expression la plus lisible à distance du lieu d’édification.
+            « Le parc de Matarazzo a envahi une tour. Qu’on se le dise. Sa tour sera regardée, enviée, fière et amicale et, à sa
+            façon, elle dira : faites comme moi, goûtez les plaisirs de vivre. Et, autour de Matarazzo d’abord, puis un peu plus
+            loin, les arbres commenceront à monter à l’assaut de la ville. »
+            Jean Nouvel</p>
+            <div class="content__img">
+                <img src="/public/img/oeuvre1_1.webp" alt="#">
+                <img src="/public/img/oeuvre1_1.webp" alt="#">
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__logo">
+                <img src="/public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
+                <p>© Ateliers Jean Nouvel</p>
+            </div>
+            <div class="footer__legal">
+                <a href="#">Conditions d'utilisation</a>
+                <a href="#">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
