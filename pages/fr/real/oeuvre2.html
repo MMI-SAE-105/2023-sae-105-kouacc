@@ -13,15 +13,20 @@
 <body>
     <header x-data="{menuOuvert: false}">
         <div class="header__logo">
-            <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
+            <a id="logo" href="/pages/fr/index.html" aria-label="Accueil"><img src="/public/icons/Logo_black.svg"
+                    alt="Logo Nouvel Rétrospective"></a>
         </div>
         <div class="header__buttons">
-            <a href="/pages/en/real/oeuvre2.html" onclick="document.cookie = `nf_lang=en; path=/ ; SameSite=Strict`"><img src="/public/icons/globe.svg" alt="Globe changement de langue"></a>
-            <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
+            <a href="/pages/en/real/oeuvre2.html" aria-label="Changer de langue"
+                onclick="document.cookie = `nf_lang=en; path=/ ; SameSite=Strict`"><img src="/public/icons/globe.svg"
+                    alt="Globe changement de langue"></a>
+            <button aria-label="Ouvrir le menu" @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg"
+                    alt="Menu header"></button>
         </div>
         <nav class="menu" x-show="menuOuvert" x-transition.duration.500ms>
             <div class="menu__button">
-                <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/cross.svg" alt="Croix menu"></button>
+                <button aria-label="Fermer" @click="menuOuvert = ! menuOuvert"><img src="/public/icons/cross.svg"
+                        alt="Croix menu"></button>
             </div>
             <ul class="menu__nav">
                 <li><a href="/pages/fr/architecte.html">Jean Nouvel</a></li>

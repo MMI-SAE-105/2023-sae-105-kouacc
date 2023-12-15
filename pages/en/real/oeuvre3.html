@@ -13,20 +13,25 @@
 <body>
     <header x-data="{menuOuvert: false}">
         <div class="header__logo">
-            <a id="logo" href="/pages/en/index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
+            <a id="logo" href="/pages/en/index.html" aria-label="Home"><img src="/public/icons/Logo_black.svg"
+                    alt="Logo Nouvel Rétrospective"></a>
         </div>
         <div class="header__buttons">
-            <a href="/pages/fr/real/oeuvre3.html" onclick="document.cookie = `nf_lang=fr; path=/ ; SameSite=Strict`"><img src="/public/icons/globe.svg" alt="Globe changement de langue"></a>
-            <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
+            <a href="/pages/fr/real/oeuvre3.html" aria-label="Change language"
+                onclick="document.cookie = `nf_lang=fr; path=/ ; SameSite=Strict`"><img src="/public/icons/globe.svg"
+                    alt="Globe changement de langue"></a>
+            <button aria-label="Open menu" @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg"
+                    alt="Menu header"></button>
         </div>
         <nav class="menu" x-show="menuOuvert" x-transition.duration.500ms>
             <div class="menu__button">
-                <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/cross.svg" alt="Croix menu"></button>
+                <button aria-label="Close menu" @click="menuOuvert = ! menuOuvert"><img src="/public/icons/cross.svg"
+                        alt="Croix menu"></button>
             </div>
             <ul class="menu__nav">
                 <li><a href="/pages/en/architecte.html">Jean Nouvel</a></li>
-                <li><a href="/pages/en/realisations.html">Réalisations</a></li>
-                <li><a href="/pages/en/reservations.html">Réservations</a></li>
+                <li><a href="/pages/en/realisations.html">Projects</a></li>
+                <li><a href="/pages/en/reservations.html">Bookings</a></li>
                 <li><a href="/pages/en/contact.html">Contact</a></li>
             </ul>
             <div class="menu__legal">
