@@ -13,10 +13,10 @@
 <body>
     <header x-data="{menuOuvert: false}">
         <div class="header__logo">
-            <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
+            <a id="logo" href="/pages/en/index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
         </div>
         <div class="header__buttons">
-            <a href="/pages/en/index.html" onclick="document.cookie = `nf_lang=en; path=/ ; SameSite=Strict`"><img src="/public/icons/globe.svg" alt="Globe changement de langue"></a>
+            <a href="/pages/fr/index.html" onclick="document.cookie = `nf_lang=fr; path=/ ; SameSite=Strict`"><img src="/public/icons/globe.svg" alt="Globe changement de langue"></a>
             <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
         </div>
         <nav class="menu" x-show="menuOuvert" x-transition.duration.500ms>
@@ -24,10 +24,10 @@
                 <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/cross.svg" alt="Croix menu"></button>
             </div>
             <ul class="menu__nav">
-                <li><a href="/pages/fr/architecte.html">Jean Nouvel</a></li>
-                <li><a href="/pages/fr/realisations.html">Réalisations</a></li>
-                <li><a href="/pages/fr/reservations.html">Réservations</a></li>
-                <li><a href="/pages/fr/contact.html">Contact</a></li>
+                <li><a href="/pages/en/architecte.html">Jean Nouvel</a></li>
+                <li><a href="/pages/en/realisations.html">Réalisations</a></li>
+                <li><a href="/pages/en/reservations.html">Réservations</a></li>
+                <li><a href="/pages/en/contact.html">Contact</a></li>
             </ul>
             <div class="menu__legal">
                 <img src="/public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
@@ -36,11 +36,11 @@
         </nav>
     </header>
     <main>
-        <section id="oeuvre2" class="container hero-2">
-            <a id="hero-2__return" href="/pages/fr/realisations.html"><img src="/public/icons/angle-left_return.svg"
+        <section id="oeuvre3" class="container hero-2">
+            <a id="hero-2__return" href="/pages/en/realisations.html"><img src="/public/icons/angle-left_return.svg"
                     alt="Flèche retour"></img></a>
-            <h1>Fondatier Cartier pour l’art contemporain</h1>
-            <h3>Paris, France</h3>
+            <h1>Centre de Culture et des Congrès (KKL)</h1>
+            <h3>Lucerne, Suisse</h3>
         </section>
         <article class="content container">
             <h2>Détails</h2>
@@ -72,8 +72,8 @@
                 <p>© Ateliers Jean Nouvel</p>
             </div>
             <div class="footer__legal">
-                <a href="#">Conditions d'utilisation</a>
-                <a href="#">Politique de confidentialité</a>
+                <a href="#">Terms of use</a>
+                <a href="#">Privacy policy</a>
             </div>
         </div>
     </footer>

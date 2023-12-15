@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouvel Rétrospective</title>
+    <link rel="stylesheet" href="/src/css/pages/styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="shortcut icon" href="/public/icons/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header x-data="{menuOuvert: false}">
+        <div class="header__logo">
+            <a id="logo" href="/pages/en/index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
+        </div>
+        <div class="header__buttons">
+            <a href="/pages/fr/reservations.html" onclick="document.cookie = `nf_lang=fr; path=/ ; SameSite=Strict`"><img src="/public/icons/globe.svg" alt="Globe changement de langue"></a>
+            <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
+        </div>
+        <nav class="menu" x-show="menuOuvert" x-transition.duration.500ms>
+            <div class="menu__button">
+                <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/cross.svg" alt="Croix menu"></button>
+            </div>
+            <ul class="menu__nav">
+                <li><a href="/pages/en/architecte.html">Jean Nouvel</a></li>
+                <li><a href="/pages/en/realisations.html">Projects</a></li>
+                <li><a href="/pages/en/reservations.html">Bookings</a></li>
+                <li><a href="/pages/en/contact.html">Contact</a></li>
+            </ul>
+            <div class="menu__legal">
+                <img src="/public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
+                <p>© Ateliers Jean Nouvel</p>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <h1 id="reservs">Bookings</h1>
+        <div class="tarifs" x-data="{tarif1: false, tarif2: false, tarif3: false}">
+            <h2>Period</h2>
+            <p>Saturday, April 13 to Sunday, June 23, 2024</p>
+            <h2>Opening hours</h2>
+            <ul>
+                <li>Monday: closed</li>
+                <li>Tuesday: 11AM to 10PM</li>
+                <li>Wednesday: 11AM to 8PM</li>
+                <li>Thursday: 11AM to 8PM</li>
+                <li>Friday: 11AM to 8PM</li>
+                <li>Satursday: 11AM to 8PM</li>
+                <li>Sunday: 11AM to 8PM</li>
+            </ul>
+            <h2>Prices</h2>
+            <div class="tarifs__dropdowns">
+                <div class="tarifs__data">
+                    <button class="tarifs__button" @click="tarif1 = ! tarif1">Standard prices<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
+                    <ul x-show="tarif1" x-collapse>
+                        <li>Full price: 11€</li>
+                        <li>Fondation Cartier Pass: 18€ - 50€</li>
+                    </ul>
+                </div>
+                <div class="tarifs__data">
+                    <button class="tarifs__button" @click="tarif2 = ! tarif2">Discounted prices<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
+                    <ul x-show="tarif2" x-collapse>
+                        <li>Discounted price: 7,50€</li>
+                        <li>Discount for 13 - 25 year-olds: €5</li>
+                    </ul>
+                </div>
+                <div class="tarifs__data">
+                    <button class="tarifs__button" @click="tarif3 = ! tarif3">Special status<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
+                    <ul x-show="tarif3" x-collapse>
+                        <li>Icom card, press card, annual pass: free ofcharge</li>
+                        <li>Under 13s, students, disabled cardholders: free of charge</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <ul class="tarifs__warning">
+            <li id="tarifs__caption">Warnings:</li>
+            <li>Tickets are non-refundable.</li>
+            <li>Identity checks will be carried out at the entrance to the exhibition, depending on visitor density. So remember to bring some form of identification with you.</li>
+            <li>Rooms start to close at 7:45pm, or 9:45pm on Tuesdays.</li>
+        </ul>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__logo">
+                <img src="/public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
+                <p>© Ateliers Jean Nouvel</p>
+            </div>
+            <div class="footer__legal">
+                <a href="#">Terms of use</a>
+                <a href="#">Privacy policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

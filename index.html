@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" :class="{noscroll:menuOuvert,}">
 
 <head>
     <meta charset="UTF-8">
@@ -8,114 +8,156 @@
     <link rel="stylesheet" href="/src/css/pages/styles.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="shortcut icon" href="/public/icons/favicon.ico" type="image/x-icon">
+
 </head>
 
 <body>
-    <header>
+    <header x-data="{menuOuvert: false}">
         <div class="header__logo">
-            <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
+            <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg"
+                    alt="Logo Nouvel Rétrospective"></a>
         </div>
         <div class="header__buttons">
-            <button><img src="/public/icons/globe.svg" alt="Globe changement de langue"><a href="contact.html"></a></button>
-            <button><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
+            <a href="/pages/en/index.html" onclick="document.cookie = `nf_lang=en; path=/ ; SameSite=Strict`"><img
+                    src="/public/icons/globe.svg" alt="Globe changement de langue"></a>
+            <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg"
+                    alt="Menu header"></button>
         </div>
-        <nav>
-            <ul>
-                <li><a href="/pages/fr/architecte.html"></a>Jean Nouvel</li>
-                <li><a href="/pages/fr/realisations.html"></a>Réalisations</li>
-                <li><a href="/pages/fr/reservations.html"></a>Réservations</li>
-                <li><a href="/pages/fr/contact.html"></a>Contact</li>
+        <nav class="menu" x-show="menuOuvert" x-transition.duration.500ms>
+            <div class="menu__button">
+                <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/cross.svg" alt="Croix menu"></button>
+            </div>
+            <ul class="menu__nav">
+                <li><a href="/pages/fr/architecte.html">Jean Nouvel</a></li>
+                <li><a href="/pages/fr/realisations.html">Réalisations</a></li>
+                <li><a href="/pages/fr/reservations.html">Réservations</a></li>
+                <li><a href="/pages/fr/contact.html">Contact</a></li>
             </ul>
+            <div class="menu__legal">
+                <img src="/public/icons/Logo_white.svg" alt="Logo Nouvel Rétrospective">
+                <p>© Ateliers Jean Nouvel</p>
+            </div>
         </nav>
     </header>
     <main>
-        <section class="container hero">
-            <h1>Redéfinissez le <span>nouveau</span></h1>
-            <h3>Nouvel Rétrospective, plus de 50 ans de travail</h3>
-            <h4>du 13 avril au 23 juin 2024</h4>
+        <section class="container hero-1">
+            <section class="hero-1__title">
+                <h1>Redéfinissez le <span>nouveau</span></h1>
+                <div class="hero-1__description">
+                    <h3>Nouvel Rétrospective, plus de 50 ans de travail</h3>
+                    <h4>du 13 avril au 23 juin 2024</h4>
+                </div>
+            </section>
             <svg xmlns="http://www.w3.org/2000/svg" width="343" height="2" viewBox="0 0 343 2" fill="none">
                 <rect y="0.799988" width="343" height="2" fill="black" />
             </svg>
-            <div class="hero__localisation">
-                <img src="/public/icons/marker 1.svg" alt="Pin emplacement">
+            <div class="hero-1__localisation">
+                <img src="/public/icons/marker.svg" alt="Pin emplacement">
                 <h4>Fondation Cartier, 261 Bd Raspail, 75014 Paris</h4>
             </div>
         </section>
-        <section>
-            <img src="/public/img/portrait1.webp" alt="Portrait Jean Nouvel">
-            <h2>Jean Nouvel</h2>
-            <p>Distingué de nombreux prix internationaux, découvrez cet architecte d’exception sur sa vision de l’espace urbain à
-            travers une exposition spectaculaire.</p>
-        </section>
-        <section class="order">
-            <h3 class="order__text">Intéressé ? Découvrez les horaires et les tarifs ici</h3>
-            <button class="order__button"><a href="/pages/fr/reservations.html">Réserver des billets</a></button>
-        </section>
-        <section x-data="{hrefCourant: '#ecran-1',}">
-            <h2>Réalisations</h2>
-            <div class="carrousel">
-                <button class="carrousel__button-left" @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth"><img src="/public/icons/angle-left 1.svg" alt="Flèche gauche"></button>
-                <button class="carrousel__button-right" @click="$refs.parent.scrollLeft += $refs.parent.clientWidth"><img src="/public/icons/angle-right 1.svg" alt="Flèche droite"></button>
-                <div class="carrousel__parent" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
-                    <div id='ecran-1' class="carrousel__ecran">
-                        <figure>
-                            <a href="/pages/fr/real/oeuvre1.html"><img src="/public/img/oeuvre1_1.webp" alt="Centre international de congrès Vinci"></a>
-                            <figcaption>Centre Internationanl de Congrès Vinci</figcaption>
-                            <p>Tours, France</p>
-                        </figure>
-                    </div>
-                    <div id='ecran-2' class="carrousel__ecran">
-                        <figure>
-                            <a href="/pages/fr/real/oeuvre2.html"><img src="/public/img/oeuvre2_1.webp" alt="Fondation Cartier pour l'art contemporain"></a>
-                            <figcaption>Fondation Cartier pour l'art contemporain</figcaption>
-                            <p>Paris, France</p>
-                        </figure>
-                    </div>
-                    <div id='ecran-3' class="carrousel__ecran">
-                        <figure>
-                            <a href="/pages/fr/real/oeuvre3.html"><img src="/public/img/oeuvre3_1.webp" alt="Centre de Culture et des Congrès (KKL)"></a>
-                            <figcaption>Centre de Culture et des Congrès (KKL)</figcaption>
-                            <p>Lucerne, Suisse</p>
-                        </figure>
-                    </div>
-                    <div id='ecran-4' class="carrousel__ecran">
-                        <figure>
-                            <a href="/pages/fr/real/oeuvre4.html"><img src="/public/img/oeuvre4_1.webp" alt="Expo.02"></a>
-                            <figcaption>Expo.02</figcaption>
-                            <p>Morat, Suisse</p>
-                        </figure>
-                    </div>
-                    <div id='ecran-5' class="carrousel__ecran">
-                        <figure>
-                            <a href="/pages/fr/real/oeuvre5.html"><img src="/public/img/oeuvre5_1.webp" alt="Torre Agbar"></a>
-                            <figcaption>Torre Agbar</figcaption>
-                            <p>Barcelone, Espagne</p>
-                        </figure>
-                    </div>
-                    <div id='ecran-6' class="carrousel__ecran">
-                        <figure>
-                            <a href="/pages/fr/real/oeuvre6.html"><img src="/public/img/oeuvre6_1.webp" alt="Gare de Bruxelles-Midi"></a>
-                            <figcaption>Gare de Bruxelles-Midi</figcaption>
-                            <p>Saint-Gilles, Belgique</p>
-                        </figure>
-                    </div>
-                    <div id='ecran-7' class="carrousel__ecran">
-                        <figure>
-                            <a href="/pages/fr/real/oeuvre7.html"><img src="/public/img/oeuvre7_1.webp" alt="Tour 25 - White Walls"></a>
-                            <figcaption>Tour 25 - White Walls</figcaption>
-                            <p>Nicosie, Chypre</p>
-                        </figure>
-                    </div>
-                    <div id='ecran-8' class="carrousel__ecran">
-                        <figure>
-                            <a href="/pages/fr/real/oeuvre8.html"><img src="/public/img/oeuvre8_1.webp" alt="Boutique Cheongdam-Dong"></a>
-                            <figcaption>Boutique Cheongdam-Dong</figcaption>
-                            <p>Séoul, Corée du Sud</p>
-                        </figure>
-                    </div>
-                </div>
+        <div class="container home">
+            <div class="home__info">
+                <section class="home__architect">
+                    <img src="/public/img/portrait1.webp" alt="Portrait Jean Nouvel">
+                    <h2>Jean Nouvel</h2>
+                    <p>Distingué de nombreux prix internationaux, découvrez cet architecte d’exception sur sa vision de
+                        l’espace urbain
+                        à
+                        travers une exposition spectaculaire.</p>
+                </section>
+                <section class="home__order">
+                    <h3 class="home__order__text">Intéressé ? Découvrez les horaires et les tarifs ici</h3>
+                    <a class="home__order__button" href="/pages/fr/reservations.html">Réserver des billets</a>
+                </section>
             </div>
-        </section>
+            <section class="carrousel" x-data="{hrefCourant: '#ecran-1',}">
+                <h2>Réalisations</h2>
+                <div class="carrousel__slide">
+                    <button class="carrousel__button-left" @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth">
+                        << /button>
+                            <button class="carrousel__button-right"
+                                @click="$refs.parent.scrollLeft += $refs.parent.clientWidth">></button>
+                            <div class="carrousel__parent" x-ref="parent"
+                                @scroll.debounce.250ms.passive="hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                                <div id='ecran-1' class="carrousel__ecran">
+                                    <figure>
+                                        <a href="/pages/fr/real/oeuvre1.html"><img src="/public/img/oeuvre1_1.webp"
+                                                alt="Centre international de congrès Vinci"></a>
+                                        <figcaption>Centre Internationanl de Congrès Vinci</figcaption>
+                                    </figure>
+                                </div>
+                                <div id='ecran-2' class="carrousel__ecran">
+                                    <figure>
+                                        <a href="/pages/fr/real/oeuvre2.html"><img src="/public/img/oeuvre2_1.webp"
+                                                alt="Fondation Cartier pour l'art contemporain"></a>
+                                        <figcaption>Fondation Cartier pour l'art contemporain</figcaption>
+                                    </figure>
+                                </div>
+                                <div id='ecran-3' class="carrousel__ecran">
+                                    <figure>
+                                        <a href="/pages/fr/real/oeuvre3.html"><img src="/public/img/oeuvre3_1.webp"
+                                                alt="Centre de Culture et des Congrès (KKL)"></a>
+                                        <figcaption>Centre de Culture et des Congrès (KKL)</figcaption>
+                                    </figure>
+                                </div>
+                                <div id='ecran-4' class="carrousel__ecran">
+                                    <figure>
+                                        <a href="/pages/fr/real/oeuvre4.html"><img src="/public/img/oeuvre4_1.webp"
+                                                alt="Expo.02"></a>
+                                        <figcaption>Expo.02</figcaption>
+                                    </figure>
+                                </div>
+                                <div id='ecran-5' class="carrousel__ecran">
+                                    <figure>
+                                        <a href="/pages/fr/real/oeuvre5.html"><img src="/public/img/oeuvre5_1.webp"
+                                                alt="Torre Agbar"></a>
+                                        <figcaption>Torre Agbar</figcaption>
+                                    </figure>
+                                </div>
+                                <div id='ecran-6' class="carrousel__ecran">
+                                    <figure>
+                                        <a href="/pages/fr/real/oeuvre6.html"><img src="/public/img/oeuvre6_1.webp"
+                                                alt="Gare de Bruxelles-Midi"></a>
+                                        <figcaption>Gare de Bruxelles-Midi</figcaption>
+                                    </figure>
+                                </div>
+                                <div id='ecran-7' class="carrousel__ecran">
+                                    <figure>
+                                        <a href="/pages/fr/real/oeuvre7.html"><img src="/public/img/oeuvre7_1.webp"
+                                                alt="Tour 25 - White Walls"></a>
+                                        <figcaption>Tour 25 - White Walls</figcaption>
+                                    </figure>
+                                </div>
+                                <div id='ecran-8' class="carrousel__ecran">
+                                    <figure>
+                                        <a href="/pages/fr/real/oeuvre8.html"><img src="/public/img/oeuvre8_1.webp"
+                                                alt="Boutique Cheongdam-Dong"></a>
+                                        <figcaption>Boutique Cheongdam-Dong</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                </div>
+                <ul class="caroussel__buttons_ecran">
+                    <li><a href="#ecran-1" class="caroussel__buttons_link"
+                            :class="{actif:hrefCourant==='#ecran-1'}"></a></li>
+                    <li><a href="#ecran-2" class="caroussel__buttons_link"
+                            :class="{actif:hrefCourant==='#ecran-2'}"></a></li>
+                    <li><a href="#ecran-3" class="caroussel__buttons_link"
+                            :class="{actif:hrefCourant==='#ecran-3'}"></a></li>
+                    <li><a href="#ecran-4" class="caroussel__buttons_link"
+                            :class="{actif:hrefCourant==='#ecran-4'}"></a></li>
+                    <li><a href="#ecran-5" class="caroussel__buttons_link"
+                            :class="{actif:hrefCourant==='#ecran-5'}"></a></li>
+                    <li><a href="#ecran-6" class="caroussel__buttons_link"
+                            :class="{actif:hrefCourant==='#ecran-6'}"></a></li>
+                    <li><a href="#ecran-7" class="caroussel__buttons_link"
+                            :class="{actif:hrefCourant==='#ecran-7'}"></a></li>
+                    <li><a href="#ecran-8" class="caroussel__buttons_link"
+                            :class="{actif:hrefCourant==='#ecran-8'}"></a></li>
+                </ul>
+            </section>
+        </div>
     </main>
     <footer>
         <div class="footer">
@@ -130,4 +172,5 @@
         </div>
     </footer>
 </body>
+
 </html>

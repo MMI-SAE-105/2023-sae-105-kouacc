@@ -17,7 +17,7 @@
             <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg" alt="Logo Nouvel Rétrospective"></a>
         </div>
         <div class="header__buttons">
-            <a href="/pages/en/index.html" onclick="document.cookie = `nf_lang=fr; path=/ ; SameSite=Strict`"><img src="/public/icons/globe.svg" alt="Globe changement de langue"></a>
+            <a href="/pages/en/reservations.html" onclick="document.cookie = `nf_lang=en; path=/ ; SameSite=Strict`"><img src="/public/icons/globe.svg" alt="Globe changement de langue"></a>
             <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg" alt="Menu header"></button>
         </div>
         <nav class="menu" x-show="menuOuvert" x-transition.duration.500ms>
@@ -68,7 +68,7 @@
                     </ul>
                 </div>
                 <div class="tarifs__data">
-                    <button class="tarifs__button" @click="tarif3 = ! tarif3">Status spéciaux<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
+                    <button class="tarifs__button" @click="tarif3 = ! tarif3">Statuts spéciaux<img src="/public/icons/angle-down.svg" alt="Flèche dropdown"></button>
                     <ul x-show="tarif3" x-collapse>
                         <li>Carte Icom, carte de presse, laissez-passer annuel&nbsp;: gratuit</li>
                         <li>Moins de 13 ans, étudiants, carte d'invalidité : gratuit</li>
