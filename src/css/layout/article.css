@@ -11,11 +11,11 @@
     font-size: var(--paragraph);
 }
 
-#content__img {
+.content__img figure {
     margin: 0;
 }
 
-#content__img > figcaption {
+.content__img  figcaption {
     font-size: var(--caption);
     color: #999;
     text-align: end;
