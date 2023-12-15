@@ -31,6 +31,7 @@
     border: 0;
     position: absolute;
     font-size: 24px;
+    color: var(--black);
 }
 
 .carrousel__button-left {
@@ -74,6 +75,22 @@
     /* button */
     font-family: Lato;
     font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    color: var(--black)
+}
+
+.error__search > button {
+    background: var(--main, #FF9533);
+    border-radius: 8px;
+    border: 0;
+    height: 40px;
+    
+    text-align: center;
+    /* button */
+    font-family: Lato;
+    font-size: var(--button);
     font-style: normal;
     font-weight: 700;
     line-height: 110%;

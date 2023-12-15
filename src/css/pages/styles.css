@@ -30,4 +30,6 @@
 
 @import url(/src/css/layout/home.css);
 
+@import url(/src/css/layout/404.css);
+
 @import url(/src/css/components/dropdown.css);

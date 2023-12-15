@@ -1,0 +1,41 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 100vh;
+}
+
+.error__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.error__search {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.error__search > label {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--caption);
+    line-height: 110%;
+    text-align: center;
+    color: #000000;
+}
+
+.error__search > input {
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--black);
+    background-color: var(--gray);
+    padding: 10px;
+    outline: none;
+}
