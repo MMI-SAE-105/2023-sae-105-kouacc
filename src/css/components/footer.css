@@ -18,7 +18,7 @@ footer {
 
 }
 
-.footer__legal > a {
+.footer a {
     color: var(--white, #FFFFFF);
     text-decoration: none;
     font-family: 'Lato', sans-serif;

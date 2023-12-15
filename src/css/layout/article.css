@@ -2,5 +2,35 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px
+    gap: 20px;
+}
+
+.content a {
+    color: var(--black);
+    font-family: Lato;
+    font-size: var(--paragraph);
+}
+
+#content__img {
+    margin: 0;
+}
+
+#content__img > figcaption {
+    font-size: var(--caption);
+    color: #999;
+    text-align: end;
+}
+
+.content__prices {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content__prices ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: var(--paragraph);
+    font-family: Lato;
 }

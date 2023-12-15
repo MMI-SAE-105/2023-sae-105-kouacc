@@ -14,18 +14,20 @@
 <body>
     <header x-data="{menuOuvert: false}">
         <div class="header__logo">
-            <a id="logo" href="/pages/fr/index.html"><img src="/public/icons/Logo_black.svg"
+            <a id="logo" href="/pages/fr/index.html" aria-label="Accueil"><img src="/public/icons/Logo_black.svg"
                     alt="Logo Nouvel Rétrospective"></a>
         </div>
         <div class="header__buttons">
-            <a href="/pages/en/index.html" onclick="document.cookie = `nf_lang=en; path=/ ; SameSite=Strict`"><img
-                    src="/public/icons/globe.svg" alt="Globe changement de langue"></a>
-            <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/menu-burger.svg"
-                    alt="Menu header"></button>
+            <a href="/pages/en/index.html" aria-label="Changer de langue"
+                onclick="document.cookie = `nf_lang=en; path=/ ; SameSite=Strict`"><img src="/public/icons/globe.svg"
+                    alt="Globe changement de langue"></a>
+            <button aria-label="Ouvrir le menu" @click="menuOuvert = ! menuOuvert"><img
+                    src="/public/icons/menu-burger.svg" alt="Menu header"></button>
         </div>
         <nav class="menu" x-show="menuOuvert" x-transition.duration.500ms>
             <div class="menu__button">
-                <button @click="menuOuvert = ! menuOuvert"><img src="/public/icons/cross.svg" alt="Croix menu"></button>
+                <button aria-label="Fermer" @click="menuOuvert = ! menuOuvert"><img src="/public/icons/cross.svg"
+                        alt="Croix menu"></button>
             </div>
             <ul class="menu__nav">
                 <li><a href="/pages/fr/architecte.html">Jean Nouvel</a></li>
@@ -62,9 +64,7 @@
                     <img src="/public/img/portrait1.webp" alt="Portrait Jean Nouvel">
                     <h2>Jean Nouvel</h2>
                     <p>Distingué de nombreux prix internationaux, découvrez cet architecte d’exception sur sa vision de
-                        l’espace urbain
-                        à
-                        travers une exposition spectaculaire.</p>
+                        l’espace urbain à travers une exposition spectaculaire.</p>
                 </section>
                 <section class="home__order">
                     <h3 class="home__order__text">Intéressé ? Découvrez les horaires et les tarifs ici</h3>

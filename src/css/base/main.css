@@ -64,6 +64,8 @@ p {
     line-height: 110%;
     margin: 0;
 }
+
+
 figcaption {
     font-family: Lato;
     font-size: var(--caption);
